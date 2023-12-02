@@ -1,4 +1,4 @@
-pub fn get_sum_calibration_values(input: &str) -> i32 {
+pub fn solve(input: &str) -> i32 {
     input.lines().map(get_calibration_value).sum()
 }
 
@@ -59,14 +59,14 @@ mod tests {
     }
 
     #[test]
-    fn test_get_sum_calibration_values_1() {
+    fn test_solve() {
         let input = indoc! {"
             1abc2
             pqr3stu8vwx
             a1b2c3d4e5f
             treb7uchet
         "};
-        let actual = get_sum_calibration_values(input);
+        let actual = solve(input);
         assert_eq!(142, actual);
     }
 }
